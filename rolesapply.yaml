@@ -1,0 +1,32 @@
+# create the service account
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: api-reader
+  namespace: configmap-poc
+---
+# create the role to grant access to configmaps
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: configmap-poc
+  name: role-api-reader
+rules:
+  - apiGroups: [""] # "" indicates the core API group
+    resources: ["pods","configmaps"]
+    verbs: ["get", "watch", "list"]
+---
+# bind the role and the service account
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: rolebinding-api-reader
+  namespace: configmap-poc
+subjects:
+  - kind: ServiceAccount
+    name: api-reader # Name is case sensitive
+    namespace: configmap-poc
+roleRef:
+  kind: Role #this must be Role or ClusterRole
+  name: role-api-reader # this must match the name of the Role or ClusterRole you wish to bind to
+  apiGroup: rbac.authorization.k8s.io
