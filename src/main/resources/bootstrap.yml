@@ -4,7 +4,7 @@ spring:
       config:
         enabled: true
         sources:
-          - namespace: default
+          - namespace: configmap-poc
             name: configmap-poc
       reload:
         enabled: true
