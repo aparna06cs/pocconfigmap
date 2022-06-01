@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: configmap-poc
+data:
+  application.properties: |-
+    welcome.message=Hello from kubernetes Aparna
+    message=Hi from kubernetes Aparna
