@@ -9,4 +9,4 @@ spring:
       reload:
         enabled: true
         mode: event
-        strategy: polling
+        strategy: REFRESH
