@@ -1,8 +1,9 @@
 # 
 Create roles and role bindings for the user running in the cluster 
 
-**Imp Commands:**
- ./mvnw com.google.cloud.tools:jib-maven-plugin:build -Dimage=gcr.io/t-operative-348503/configmap-poc:v11 - build the imaage and pushing the docker image to the container registry 
+**build the imaage and pushing the docker image to the container registry **
+
+ ./mvnw com.google.cloud.tools:jib-maven-plugin:build -Dimage=gcr.io/t-operative-348503/configmap-poc:v11 - 
 
 **cluster login**
 gcloud container clusters get-credentials configmap4-cluster-1 --zone us-central1
