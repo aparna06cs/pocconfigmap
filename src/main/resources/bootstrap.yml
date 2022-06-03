@@ -10,3 +10,6 @@ spring:
         enabled: true
         mode: event
         strategy: REFRESH
+management:
+  endpoint:
+    restart:      enabled: true
