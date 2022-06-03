@@ -1,5 +1,6 @@
 package com.spring.k8client1;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
@@ -7,7 +8,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class SampleConfiguration {
 	
-	    private String message = "hello how r u";
+	    @Value("${message:property from spring boot local}")
+	    private String message;
 
 	    public String getMessage() {
 	        return message;
