@@ -1,11 +1,9 @@
 package com.spring.k8client1;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.context.annotation.Configuration;
 
 @ConfigurationProperties(prefix = "welcome")
-@RefreshScope
 @Configuration
 public class SampleConfiguration {
 	
@@ -16,6 +14,7 @@ public class SampleConfiguration {
 	    }
 
 	    public void setMessage(String message) {
+	    	System.out.println("the message from configuration class:"+message);
 	        this.message = message;
 	    }
 	}
