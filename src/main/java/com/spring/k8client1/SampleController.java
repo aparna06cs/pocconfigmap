@@ -17,5 +17,10 @@ public class SampleController {
 	        System.out.println("the controoler class->"+conf.getMessage());
 	        return conf.getMessage();
 	    }
+	  @GetMapping("/message")
+	    public String sampleMessage() {
+	        System.out.println("the controoler class->"+conf.getSamplemessage());
+	        return conf.getSamplemessage();
+	    }
 
 }
