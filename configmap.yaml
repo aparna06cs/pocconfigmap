@@ -6,3 +6,4 @@ data:
   application.properties: |-
     welcome.message=Hello from kubernetes Aparna
     message=Hi from kubernetes Aparna
+    welcome.message1=hello from configmap 1
