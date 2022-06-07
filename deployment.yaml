@@ -31,7 +31,7 @@ spec:
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
-        - env:
+          env:
            - name: JAVA_OPTIONS
              value: -Dspring.profiles.active=dev
          
