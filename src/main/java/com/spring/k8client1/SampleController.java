@@ -28,5 +28,11 @@ public class SampleController {
 	        System.out.println("the controoler class message 1 config map 1->"+conf.getMessage1());
 	        return conf.getMessage1();
 	    }
+	  
+	  @GetMapping("/default")
+	    public String defaultMessage() {
+	        System.out.println("the controoler class message 1 config map 1->"+conf.getDefaultValue());
+	        return conf.getDefaultValue();
+	    }
 
 }

@@ -18,6 +18,10 @@ public class SampleConfiguration {
 	    //property from config map 1
 	    @Value("${message1:property from spring boot local sample message from config map1}")
 	    private String message1;
+	    
+	    //property from configmap1 and default
+	    @Value("${default:default property}")
+	    private String defaultValue;
 
 
 	    public String getMessage() {
@@ -44,6 +48,14 @@ public class SampleConfiguration {
 
 		public void setMessage1(String message1) {
 			this.message1 = message1;
+		}
+
+		public String getDefaultValue() {
+			return defaultValue;
+		}
+
+		public void setDefaultValue(String defaultValue) {
+			this.defaultValue = defaultValue;
 		}
 		
 		
