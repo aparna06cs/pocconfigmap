@@ -27,7 +27,11 @@ spec:
     spec:
       containers:
         - name: configmap-poc
-          image: configmap-poc
-          imagePullPolicy: Never
+          image: gcr.io/t-operative-348503/configmap-poc:v14
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
+        - env:
+           - name: JAVA_OPTIONS
+             value: -Dspring.profiles.active=dev
+         
