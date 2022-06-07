@@ -26,7 +26,7 @@ public class SampleController {
 	  @GetMapping("/message1")
 	    public String sampleMessage1() {
 	        System.out.println("the controoler class message 1 config map 1->"+conf.getMessage1());
-	        return conf.conf.getMessage1();
+	        return conf.getMessage1();
 	    }
 
 }
