@@ -3,13 +3,18 @@ kind: ConfigMap
 metadata:
   name: configmap-poc
 data:
-  application.properties: |
-    welcome.message=Hello from kubernetes propety source default 
-    message=Hi from kubernetes Aparna
-    welcome.message1=hello from configmap 1
-    welcome.default=default message
-  application-dev.properties: |
-    welcome.message1=Hello from kubernetes propety source from DEV 
-  application-prod.properties: |
-    spring.profiles=prod
-    welcome.message1=Hello from kubernetes propety source from PROD 
+  application.yml: |-
+    welcome:
+      message: Hello from kubernetes propety source from default message
+    farewell:
+      message: Say Goodbye
+    ---
+    spring:
+      profiles: dev
+    welcome:
+      message1: Hello from kubernetes propety source from DEV
+    ---
+    spring:
+      profiles: prod
+    welcome:
+      message1: Hello from kubernetes propety source from PROD
