@@ -6,8 +6,8 @@ data:
   application.yml: |-
     welcome:
       message: Hello from kubernetes propety source from default message
-    farewell:
-      message: Say Goodbye
+    welcome:
+      message1: Hello from kubernetes propety source from default message1
     ---
     spring:
       profiles: dev
